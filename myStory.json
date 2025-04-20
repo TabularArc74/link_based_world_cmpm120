@@ -1,0 +1,196 @@
+{
+    "Title": "The Golden Horizon",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu) with story content from Silas Baller.",
+    "InitialLocation": "Airlock",
+    "HasKey": false,
+    "HasMap": false,
+    "Map": "Deck 1: Airlock, Deep Storage, Navigation, Engine Room   Deck 2: Crew Quarters, Secondary Laboratory    Deck 3: Bridge, Primary Laboratory",
+    "Locations": {
+        "Airlock": {
+            "Body": "The doors hiss open in front of you, revealing the dark hallway. You're a scaeship scrapper, sent to assess the condition of the GOlden Horizon, which was considered lost at sea until the nearby station picked up a short-range emergency beacon. Your mission is to establish a link to the station to mark the ship for pickup, if it's worth the trip. To do so, you must locate the bridge.",
+            "Choices": [
+                {
+                    "Text": "Forward",
+                    "Target": "AirlockHallway"
+                }
+            ]
+        },
+        "AirlockHallway": {
+            "Body": "You step forward an walk down the hallway. At the end are two closed doors, one labeled storage, the other navigation. Directly to your right is another door labeled engine.",
+            "Choices": [
+                {
+                    "Text": "Go through the door marked navigation",
+                    "Target": "Navigation"
+                },
+                {
+                    "Text": "Go through the door marked storage",
+                    "Target": "Storage_01"
+                },
+                {
+                    "Text": "Go through the door marked engine",
+                    "Target": "Engine"
+                }
+            ]
+        },
+        "Storage_01": {
+            "Body": "You open the door, revealing a storage closet. The only thing of interest is a PDA for the ship, lying on a shelf.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "AirlockHallway"
+                }
+            ],
+            "Log": "Registration Information:   Name: Golden Horizon    Class: Type-B Observation Frigate   ID: 34.766.JOS   Current Station: 11.C1-ANOMALY   Current Captain: Hyreth R Morrow    Previous Captain: N/A"
+        },
+        "Engine": {
+            "Body": "The door opens to reveal the engine room. Immediately you see the reason this ship was lost. The crystal used to power the vibration engine was missing from its housing, the metal frame ruptured and broken. A blinking terminal next to the engine displays a system report of the incident",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "AirlockHallway"
+                }
+            ],
+            "Log": "34.766.JOS.MAINTENENCE_log.VIB_ENG.8.12.520.RPT:        MASSIVE HEAT SPIKE DETECTED    INNER CHAMBER TEMPERATURE EXCEEDING 100°C    PROTOCOL ACCEPTED    VENTING INNER CHAMBER    WARNING    INNER CHAMBER TEMPERATURE EXCEEDING 300°C    PROTOCOL ACCEPTED    VENTING INNER CHAMBER    PROTOCOL UNEFFECTIVE    INNER CHAMBER RUPTURE DETECTED    PROTOCOL REJECTED    REASON: Coolant system control unresponsive    WARNING    INNER CHAMBER TEMPERATURE EXCEEDING 400°C    OUTER CHAMBER RUPTURE DETECTED    PROTOCOL REJECTED    REASON: Safety 34-Y    BYPASS BLOCKED    REASON: Captain authorization required    MASSIVE ENERGY SPIKE DETECTED IN MAIN CONVERTER    WARNING    INNER CHAMBER TEMPERATURE EXCEEDING 700°C    Bypass accepted    Safety 34-Y disabled    MAIN CONVERTER OFFLINE    PROTOCOL REJECTED    REASON: Bay doors unresponsive    SECONDARY CONVERTER OFFLINE    TERTIARY CONVERTER OFFLINE    WARNING    MANUAL OPENING OF BAY DOORS COMMENCING    VENTING VIBRATION CRYSTAL"
+        },
+        "Navigation": {
+            "Body": "You enter into the ship's navigation room. Most of the instruments inside are unpowered, however one is emanating a dim light. At the opposite end is an elevator leading to different areas of the ship.",
+            "Choices": [
+                {
+                    "Text": "Approach the screen",
+                    "Target": "NavMechanic"
+                },
+                {
+                    "Text": "Call the elevator",
+                    "Target": "Elevator"
+                },
+                {
+                    "Text": "Go Back",
+                    "Target": "AirlockHallway"
+                }
+            ]
+        },
+        "NavMechanic": {
+            "Body": "You approach the screen and tap it, bringing it out of sleep mode. Displayed is a map of the ship.",
+            "Button":"Download map data"
+        },
+        "Elevator": {
+            "Body": "You step into the elevator, seeing several buttons, unlabeled except for their numbers.",
+            "Choices": [
+                {
+                    "Text": "1",
+                    "Target": "Navigation"
+                },
+                {
+                    "Text": "2",
+                    "Target": "Deck_2"
+                },
+                {
+                    "Text": "3",
+                    "Target": "Deck_3"
+                }
+            ]
+        },
+        "Deck_2": {
+            "Body": "The elevator doors open to reveal a hallway, containing signage indicating the various doorways along the walls belonging to various members of the crew. Most are locked with bioidentification tehcnology, however one dar is slightly ajar, marked as \"Captain Morrow\". There is also a large door at the end of the hallway marked \"Secondary Laboratory\".",
+            "Choices": [
+                {
+                    "Text": "Go to the captain's quarters",
+                    "Target": "CapQuarters"
+                },
+                {
+                    "Text": "Go to the secondary laboratory",
+                    "Target": "Lab"
+                }
+            ]
+        },
+        "CapQuarters": {
+            "Body": "You enter into Captain Morrow's quarters. Inside is a bed and desk. The selves contain a couple knick knacks and trinkets. On the desk is another PDA. Upon further inspection, it isn't the captain's instead belonging to one of the medical staff. Open is the transcription of a voice log.",
+            "Choices": [
+                {
+                    "Text": "Go back to the elevator",
+                    "Target": "Elevator"
+                },
+                {
+                    "Text": "Go to the secondary laboratory",
+                    "Target": "Lab"
+                }
+            ],
+            "Log": "5 people have come to me today talking about hallucinations. Normally this wouldn’t be a problem, I would just prescribe them bedrest, we have been on this ship for awhile. (tap tap) But each one talked about the same thing. A shadowy form, a twisted thing lurking in the corner of their vision. Is there something on this ship that shouldn’t be?   (pause)    Tch. Who am I kidding, it’s just a group of friends wanting to play cards together instead of patrol. Can’t fault them for that. Still. Should’ve compared notes.   (tap tap)    It’s nothing right? It’s nothing. Yeah…    (tap tap)   I should probably bring this up with the captain."
+        },
+        "Lab": {
+            "Body": "The door hisses open. Beyond is a clean laboratory, full of what you would expect. However, there appears to have been some form of struggle or the like. Equipment is broken, vials are strewn about the floor, various liquids form puddles. The thing you notice is on the table close to the entrance is a PDA belonging to Lilith, the chief scientist on the Golden Horizon. NExt to it is a lanyard holding her keycard. This should provide access to high clearance areas of the ship. You take it.",
+            "Choices": [
+                {
+                    "Text": "Go back to the elevator",
+                    "Target": "Elevator"
+                }
+            ],
+            "Log": "We have no visual confirmation of the anomaly. It didn’t appear on any observable frequencies until we got close. It does not appear to have any gravitational force. For all intents and purposes, it is nonexistent. I have been unable to gain any sense of how big it is, if it even has physical dimensions. We have no visual, only a faint vibration signature. It’s hard to know where to even begin. …This is going to be harder than I thought. I’m going to run down the rudimentary list of tests to hopefully gain even the semblance of a semblance of understanding. End log."
+        },
+        "Deck_3": {
+            "Body": "The elevator doors open to reveal a hallway with two doors. One marked \"Bridge\" and the other \"Primary Laboratory\"",
+            "Choices": [
+                {
+                    "Text": "Go to the primary laboratory",
+                    "Target": "VentLab"
+                },
+                {
+                    "Text": "Go to the bridge",
+                    "Target": "Bridge"
+                }
+            ]
+        },
+        "VentLab": {
+            "Body": "You approach the doors to the primary laboratory but they're sealed shut. A screen next to the door displays a warning: \"CAUTION: No atmosphere detected\"",
+            "Choices": [
+                {
+                    "Text": "Go back to the elevator",
+                    "Target": "Elevator"
+                },
+                {
+                    "Text": "Go to the bridge",
+                    "Target": "Bridge"
+                }
+            ]
+        },
+        "Denied": {
+            "Body": "The doors to the bridge are locked, but a keycard slot indicates a possible workaround.",
+            "Choices": [
+                {
+                    "Text": "Go back to the elevator",
+                    "Target": "Elevator"
+                }
+            ]
+        },
+        "Bridge": {
+            "Body": "Using the keycard, you open the doors, revealing the bridge of the ship. All the instruments appear to be non-functional besides a singular terminal in the denter of the room. Next to the terminal is the body of who you can only assume is Captain Morrow. Oddly, this is the only body you've seen aboard this ship.",
+            "Choices": [
+                {
+                    "Text": "Investigate the terminal",
+                    "Target": "Terminal"
+                }
+            ]
+        },
+        "Terminal": {
+            "Body": "You power on the terminal and see a final log from the captain of the frigate. Also displayed are the tools needed to connect the ship to the space station.",
+            "Choices": [
+                {
+                    "Text": "Establish a comm link with the station",
+                    "Target": "Ending1"
+                },
+                {
+                    "Text": "Leave the Golden Horizon",
+                    "Target": "Ending2"
+                }
+
+            ],
+            "Log": "I’ve blockaded myself on the bridge. The doors should hold it back for a while at least. That’s not my concern. My concern is the survival of The Collective. This is my final message. The Anomaly was like nothing we could ever have predicted. I don’t know what it is exactly, but if you’re listening to this, you know. You’ve seen it no doubt. Or you’ve seen the absence of space. That space where nothing is but something should be. (sigh) This discovery cannot go unchecked. I’m going to lock down the ship. I can’t risk it escaping. The main generator is long dead. Everything will shut down to conserve power. I’m sorry to whatever poor unfortunate soul I dragged out here. I hope you can survive and alert the Collective. Just…whatever you do, don’t let it out. If you already did…Solar save us all.    (pause)    Launching emergency beacon.   END TRANSMISSION"
+        },
+        "Ending1": {
+            "Body": "You manipulate the terminal, accessing the comm link, and establish a connection with the space station. Job complete."
+        },
+        "Ending2": {
+            "Body": "You turn and walk away from the terminal, taking the elevator down to the airlock. You return to your shuttle and head for the station, leaving the Golden Horizon behind. Job Abandoned."
+        }
+    }
+}
